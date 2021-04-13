@@ -1,0 +1,241 @@
+/* pantone 灰#848490  藍#0f4c81  淺藍#B6CADA 膚#f2d6ae*/
+@keyframes ld-blur {
+  0% {
+    filter: blur(0);
+  }
+  50% {
+    filter: blur(10%);
+  }
+  100% {
+    filter: blur(0);
+  }
+}
+.ld.ld-blur {
+  animation: ld-blur 1s infinite linear;
+}
+@keyframes ld-beat {
+  0% {
+    animation-timing-function: cubic-bezier(0.1028, 0.2484, 0.1372, 0.849);
+    transform: scale(1);
+  }
+  34% {
+    animation-timing-function: cubic-bezier(0.7116, 0.2095, 0.8159, 0.6876);
+    transform: scale(1.2);
+  }
+  68% {
+    animation-timing-function: cubic-bezier(0.1475, 0.2888, 0.294, 0.883);
+    transform: scale(1.0268);
+  }
+  84% {
+    animation-timing-function: cubic-bezier(0.8176, 0.2193, 0.867, 0.6889);
+    transform: scale(1.0932);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.ld.ld-beat {
+  animation: ld-beat 1s infinite linear;
+}
+
+/* 開MENU */
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/* 字型 */
+@font-face {
+  font-family: "myFont";
+  src: url("gensen-font-master/ttc/GenSenRounded-H.ttc");
+}
+
+/* 全文字型 */
+* {
+  font-family: "myFont";
+}
+/* 標題文字 + about*/
+#about h2 {
+  position: relative;
+  top: 7rem;
+  writing-mode: vertical-lr;
+}
+h2 {
+  color: #000000;
+  text-shadow: 2px 2px 3px#848490;
+}
+
+
+/* header */
+header > img {
+  display: block;
+  margin: auto;
+  padding: 10px;
+  height: 5rem;
+  object-fit: contain;
+}
+header {
+  background-color: white;
+}
+
+/* 首頁輪播圖片 */
+.carousel-item > img {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+}
+/* 首頁文字-開始*/
+.homeWord {
+  position: absolute;
+  background-color: white;
+  opacity: 0.4;
+  width: 100%;
+  top: 60%;
+  text-align: 50%;
+}
+.homeWord p,
+h2 {
+  margin-left: 5%;
+}
+/* 首頁文字-結束*/
+
+/* menu視窗-開始 */
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+/* menu視窗-結束 */
+
+/* menu的位置-開始*/
+.menu {
+  max-width: 125px;
+  list-style-type: none;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+}
+/* menu的位置-結束*/
+
+/* menu的icon-開始*/
+.menu {
+  width: 30px;
+  height: 25px;
+  border-top: 5px solid #658dc6;
+  border-bottom: 5px solid #658dc6;
+  background-color: #658dc6;
+  padding: 5px 0;
+  background-clip: content-box;
+}
+/* menu的icon-結束*/
+
+/* about-開始 */
+#about {
+  line-height: 1rem;
+}
+#about p {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.imgAbout {
+  display: flex;
+  /* justify-content: space-between; */
+  width: 100%;
+}
+
+.imgAbout > img {
+  flex: 1;
+  width: 20%;
+  object-fit: contain;
+  margin: 10px;
+  box-shadow: 5px 5px 12px gray;
+}
+
+/* about-結束 */
+
+/* 熱量攝取-開始 */
+#eat {
+  line-height: 3rem;
+}
+/* 熱量攝取插圖 */
+#eat img {
+  width: 10rem;
+}
+
+/* 每頁間格-開始 */
+div[class*="row"] {
+  margin-bottom: 150px;
+}
+/* 每頁間格-結束 */
+
+/* 日歷插圖 */
+/* .noFaceMan{
+  background-image: url("img/c1.gif");
+  background-size: 7rem;
+  background-repeat: no-repeat;
+  top: 8rem;
+} */
+.totoro {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+}
+
+body {
+  background-image: url(img/background3.png);
+
+}
+/* 右下角-fix-開始 */
+.bottomright {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+}
+
+/* 右下角-fix-結束 */
+
+
+

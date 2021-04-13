@@ -1,0 +1,233 @@
+<!-- 主色 #74C0B3  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>MY</title>
+  <link rel="stylesheet" href="boostrap/css/bootstrap.min.css" />
+  <script src="boostrap/js/jquery.min.js"></script>
+  <script src="boostrap/js/popper.min.js"></script>
+  <script src="boostrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="my.css" />
+  <link rel="stylesheet" href="calendar.css" />
+
+
+  <!-- 開menu 的JavaScript-->
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.display = "block";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.display = "none";
+    }
+  </script>
+
+</head>
+
+<body >
+<div style="width: 100%;">
+  <header>
+    <!-- logo -->
+    <img id="myheaader"  src="img/header.gif" alt="" />
+    <!-- 右上menu -->
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+        <a href="#">首頁</a>
+        <a href="#about">關於colcal</a>
+        <a href="#eat">熱量紀錄</a>
+        <a href="#month">每月檢討</a>
+      </div>
+    </div>
+    <span class="menu" onclick="openNav()"> </span>
+  </header>
+  <!-- 首頁開始 -->
+  <div class="row " style="position: relative;">
+    <div class="col-12" style="height: 600px">
+      <!-- 首頁輪播圖片 -->
+      <div class=" carousel slide " data-ride="carousel" data-interval="1400">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/1.jpg" alt="" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/2.jpg" alt="" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 首頁文字 -->
+      <div class="homeWord clearfix">
+        <h2>Home</h2>
+        <p>減肥的基本原理就是攝取量（從食物中所吃入的卡路里）＜消耗量（你身體一天所能消耗的卡路里），</p>
+        <p>當所吃的熱量不足身體消耗所需時，身體就會從脂肪裡將能量拿出來使用，</p>
+        <p>因此你就會瘦到脂肪，曲線就會變得窈窕。</p>
+      </div>
+    </div>
+  </div>
+  <!-- 首頁結束 -->
+  <!-- about -->
+  <div id="about" class="row " style="margin-top: 17rem;">
+    <div class="col-1"></div>
+    <div class="col-10 " style="width: 100%;">
+      <h2>ABOUT</h2>
+      <p> 我們不得不面對一個非常尷尬的事實，</p>
+      <p>那就是，</p>
+      <p>做好卡洛里這件事，</p>
+      <p>可以說已經成為了全民運動。</p>
+      <p>阿巴巴耶娃曾經說過，</p>
+      <p>離別對於愛情，</p>
+      <p>就像風對於火一樣：它熄滅了火星，但卻能煽起狂焰。</p>
+      <p>想必各位已經看出了其中的端倪。</p>
+      <p>就我個人來說，卡洛里對我的意義，不能不說非常重大。</p>
+      <p>其實，若思緒夠清晰，那麼卡洛里也就不那麼複雜了。</p>
+      <p>蓋斯科因說過一句發人省思的話，</p>
+      <p>維持一座空中樓閣需付出高昂的代。</p>
+      <p>這不禁令我重新仔細的思考</p>
+      <!-- <video style="width: 100;" src="img/Henna - 39398.mp4"></video> -->
+      <div class="imgAbout">
+      <img src="img/about1.jpg" alt=""/>
+      <img src="img/about3.jpg" alt=""/>
+      <img src="img/about2.jpg" alt=""/>
+      </div>
+      <div class="col-1"></div>
+    </div>
+  </div>
+  <!-- 熱量攝取 -->
+  <div class="row" id="eat">
+    <!-- 左邊空白 -->
+    <div class="col-1"></div>
+    <!-- 表格+input 開始-->
+    <div class="col-10 ">
+      
+      <!-- datalist開始 -->
+      <div class="clearfix">
+       
+        <img class="float-left" src="img/eat2.png" alt="">
+        <h2>熱量紀錄</h2> <img class="float-right" src="img/eat3.png" alt="">
+        <br>
+        <input id="cal" type="text" list="food" style="width: 50%; margin-right: 20px" />
+        <em>輸入攝取熱量</em> &nbsp;&nbsp;
+        <button onclick="getCal(); allSum()" class="btn btn-secondary">送出</button>
+         
+        <datalist id="food">
+          <option value="300卡 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;白飯"></option>
+          <option value="120卡&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;炸雞"></option>
+          <option value="260卡&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;牛排"></option>
+          <option value="190卡&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;煎蛋"></option>
+          <option value="6卡&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;美式咖啡"></option>
+          <option value="300卡&nbsp; &nbsp;&nbsp;&nbsp;巧克力吐司"></option>
+          <option value="42卡&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;無糖豆漿"></option>
+          <option value="70卡&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;奶茶"></option>
+          <option value="61卡&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;奇異果"></option>
+        </datalist> 
+       
+     
+    </div>
+      <!-- datalist結束 -->
+      <!-- 表格清單開始 -->
+      <table class="table table-light table-hover ">
+        </thead>
+        <thead>
+          <tr>
+            <th>品牌</th>
+            <th>食物種類</th>
+            <th>熱量</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>7-11</td>
+            <td>肉鬆菜脯糯米風味飯糰</td>
+            <td>454kcal</td>
+          </tr>
+          <tr>
+            <td>傳香飯糰</td>
+            <td>五穀米飯糰</td>
+            <td>500kcal</td>
+          </tr>
+          <tr>
+            <td>永和豆漿</td>
+            <td>紫米飯糰</td>
+            <td>422kcal</td>
+          </tr>
+          <tr>
+            <td>傳香飯糰</td>
+            <td>五穀米飯糰</td>
+            <td>500kcal</td>
+          </tr>
+        </tbody>
+      </table>
+    
+      <!-- 表格結束 -->
+
+    </div>
+    <!-- 右邊空白 -->
+    <div class="col-1"></div>
+  </div>
+  <!-- 日歷-開始-->
+
+  <div class="row" id="month">
+    <div class="col-1 noFaceMan"></div>
+    <div class="calendar col-10">
+      <!-- 日曆月份 -->
+      <div class="title clearfix">
+        <h1 class="text-center" id="calendar-title">Month</h1>
+        <h2 class="text-center" id="calendar-year">Year</h2>
+
+        <a style="font-size: 2rem;" class="float-left " href="" id="prev">&#10094; <img class="totoro" src="img/c2.gif" alt=""> </a>
+        <a style="font-size: 2rem;" class="float-right" href="" id="next"><img class="totoro" src="img/c3.gif" alt="">&#10095;</a>
+
+      </div>
+      <div class="body">
+        <div class="lightgrey body-list">
+          <ul>
+            <li>MON</li>
+            <li>TUE</li>
+            <li>WED</li>
+            <li>THU</li>
+            <li>FRI</li>
+            <li>SAT</li>
+            <li>SUN</li>
+          </ul>
+        </div>
+        <div class="darkgrey body-list">
+          <ul id="days" >
+          </ul>
+        </div>
+      </div>
+
+      <!-- 日歷-結束-->
+
+    </div>
+    <div class="col-1 "></div>
+  </div>
+  <!-- 日歷-結束-->
+ 
+<!-- test -->
+<ul>
+  <li></li>
+</ul>
+
+  <!-- 右下角 fixed 開始-->
+  <a class="" href="#">
+    <div class="bottomright text-center text-danger ">
+      <img style="width: 2rem;" src="img/arrow.png" alt="">
+     </div>
+  </a>
+  <!-- 右下角 fixed 結束-->
+
+
+  <script type='text/javascript' src='calendar.js'></script>
+  <script src="my.js"> </script>
+</div>
+</body>
+
+</html>

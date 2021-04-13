@@ -1,0 +1,50 @@
+.calendar{
+	width: 100%;
+	background:#B6CADA;
+}
+.title{
+background:#f2d6ae;
+padding:4rem ;
+width: 100%;
+}
+.body-list ul{
+	width:100%;
+	font-family:arial;
+	font-weight:bold;
+	font-size:1rem;
+}
+.body-list ul li{
+	width:14%;
+	height:4rem;
+	list-style-type:none;
+	box-sizing:border-box;
+	float:left;
+	text-align:center;
+}
+
+.lightgrey{
+	position: relative;
+	color:#a8a8a8; /*浅灰色*/
+}
+.darkgrey{
+	color:#565656; /*深灰色*/
+}
+.green{
+	color:#F5B895; /*绿色*/
+}
+.greenbox{
+	position: relative;
+	border:1px solid #6ac13c;
+	background:#e9f8df; /*浅绿色背景*/
+}
+
+/* 顯示當天熱量 */
+#days li:hover::after{
+	/* content: "1369"; */
+	margin-left: 1rem;
+	border:1px solid white;
+	position:absolute;
+	color:#dc3545;
+	cursor: pointer;
+  
+  }
